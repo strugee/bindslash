@@ -1,0 +1,25 @@
+{
+  "name": "bindslash",
+  "version": "1.0.0",
+  "description": "Not configuration management",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "ini": "^1.3.4",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strugee/bindslash.git"
+  },
+  "author": "Alex Jordan <alex@strugee.net>",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/strugee/bindslash/issues"
+  },
+  "homepage": "https://github.com/strugee/bindslash#readme"
+}
