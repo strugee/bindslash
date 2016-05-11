@@ -26,7 +26,6 @@ program
 
 program.parse(process.argv);
 
-console.log(typeof action);
 if (typeof action === 'undefined') {
 	process.exitCode = 1;
 	program.help();
@@ -41,4 +40,11 @@ for (var plugin in config.bindslash) {
 	plugins.push({name: plugin, path: dir});
 }
 
-//bindslash.importConfiguration(plugins);
+switch (action) {
+case 'import':
+	bindslash.importConfiguration(plugins);
+	break;
+case 'export':
+	bindslash.exportConfiguration(plugins);
+	break;
+}
