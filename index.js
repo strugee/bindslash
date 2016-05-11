@@ -1,6 +1,6 @@
 'use strict';
 
-var fs = require('fs');
+var mkdirp = require('mkdirp');
 
 function importConfiguration(plugins) {
 	plugins.forEach(function(pluginConfig) {
@@ -16,8 +16,8 @@ function exportConfiguration(plugins) {
 		var path = pluginConfig.path;
 		var plugin = require('bindslash-' + pluginConfig.name);
 
-		fs.mkdir(path, function(err) {
-			throw err;
+		mkdirp(path, function(err) {
+			if (err) throw err;
 
 			plugin.exportConfiguration(path);
 		});
